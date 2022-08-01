@@ -20,8 +20,11 @@ for _ in range(1, T+1):
 
    
     result_list = [] # 빈 리스트를 생성
+    m = max(num_dict.values()) # 코드 수정 m의 변수에 max값을 저장하고
     for key, value in num_dict.items(): # 딕셔너리 key value를 순회하면서
-        if max(num_dict.values()) == value: # 딕셔너리 value중에 제일 큰값이 value랑 같으면
+        if m == value: # 코드 수정
+        # if max(num_dict.values()) == value: 
+        # 이전 코드 - max값은 변화하지 않는데 계속 for문 돌면서 계속해서 max값 계산 시간 많이 걸림
             result = key # 그 해당 key를 뽑아내서 result에 저장
             result_list.append(result) # 빈리스트에 그 키를 저장해준다
             if len(result_list) == 2: # 만약 모두 저장된 리스트의 길이가 2이면 즉, 중복값이 있다면
@@ -30,4 +33,8 @@ for _ in range(1, T+1):
     print(f'#{T_n} {result}') # 프린트를 제출
 
 # 런타임에러가 남 이유는 중복값 중 큰값을 최종 result에 넣어야 한다는 조건을 추가하지 못했기 때문
+
+
+# 보완해 주신 부분을 추가
+
 

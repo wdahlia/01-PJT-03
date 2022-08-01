@@ -33,7 +33,7 @@ for i in range(1, 11):
                 origin_text.insert(int(idx)+cnt, new) # idx를 int로 변환한 값에 cnt(초기에는 0)을 더한 인덱스에 new를 추가
                 cnt += 1 # 1씩 더해준다. 새로운 I 튀어나오기 전까지
 
-    origin_text = origin_text[:10] # 변환된 origin_text 값을 10개만 출력하라 했으므로 슬라이싱 해준다
+    # origin_text = origin_text[:10] # 이전 코드 : 변환된 origin_text 값을 10개만 출력하라 했으므로 슬라이싱 해준다
 
     print(f'#{i}', end=' ') # f스트링을 사용하여 #{i} end를 한칸 공백으로하고 origin_text 즉 리스트를 * < 순환하며
-    print(*origin_text) # 그 값을 #{i}와 공백을 두고 ' ' 출력
+    print(*origin_text[:10]) # 슬라이싱을 출력 시 하는 방법으로 수정 # 그 값을 #{i}와 공백을 두고 ' ' 출력
